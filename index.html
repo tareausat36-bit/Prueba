@@ -92,13 +92,27 @@
   }
 
   .header{
-    padding: 22px 22px 12px;
-    display:flex;
-    align-items:flex-end;
-    justify-content:space-between;
-    gap:14px;
-    flex-wrap:wrap;
-  }
+  padding: 22px 22px 12px;
+  display:grid;
+  grid-template-columns: 1fr auto;
+  align-items:end;
+  gap:14px;
+}
+
+.header > div:first-child{
+  text-align:center;
+}
+
+.header > div:first-child h1{
+  margin:0;
+  text-align:center;
+}
+
+.header > div:first-child .sub{
+  margin: 8px auto 0;
+  text-align:center;
+}
+
   h1{
     margin:0;
     letter-spacing:.16em;
@@ -502,7 +516,7 @@
       <div class="header">
         <div>
           <h1>WORK IN PROGRESS</h1>
-          <div class="sub">Estamos construyendo algo bonito. Haz clic en la ventana de construcción para acelerar el proceso.</div>
+          <div class="sub">Se esta construyendo algo bonito, puedes recordarle al encargado que no lo olvide.</div>
         </div>
         <div class="badge"><span class="dot"></span> Construcción activa</div>
       </div>
@@ -521,7 +535,7 @@
 
           <div class="status">
             <span class="hint"><i></i> <span id="step">Acomodando materiales…</span></span>
-            <span>máximo 85% → reinicio a 30%</span>
+            <span>Ups aún no esta listo</span>
           </div>
         </div>
 
